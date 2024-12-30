@@ -1,12 +1,27 @@
 ---
+
 import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Header from '../components/Header.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Skill from '../components/Skill.astro';
+import Redes from '../components/Redes.astro';
+
 
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1 class="text-center font-sans font-bold text-xl">Hola mundo</h1>
+<Layout title="Welcome to my portfolio | Federico Hidalgo.">
+	<main class="text-white text-2xl">
+		<Nav/>
+		<Header/>
+		<Proyectos/>
+		<Skill/>
+		<Redes/>
 	</main>
 </Layout>
 
-
+<style>
+	body{
+		overflow-x: hidden;
+	}
+</style>

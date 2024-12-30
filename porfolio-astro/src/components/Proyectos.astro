@@ -1,0 +1,43 @@
+---
+import imga from '../C5F82A.png';
+import Image from 'astro/components/Image.astro';
+import Card from './Card.astro';
+---
+
+<div id="proyectos">
+    <div>
+        <h3 class="text-[#C5F82A] text-center mt-32  text-3xl font-bold">Mis Proyectos</h3>
+        <Image src={imga} alt="img" class="w-full h-[200px]" />
+    </div>
+    <div class="bg-[#C5F82A] m-auto  columnas  py-14">
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+    </div>
+    <Image src={imga} alt="img" class="w-full lg h-[200px] rotate-180" />
+
+</div>
+
+
+<style>
+    .columnas{
+        display: grid;
+        gap: 50px;
+    }
+@media(min-width:1024px){
+    .columnas{
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(450px, 1fr)
+        );
+        gap:50px;
+    }
+
+}
+
+</style>
+

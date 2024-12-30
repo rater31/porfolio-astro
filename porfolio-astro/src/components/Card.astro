@@ -1,0 +1,21 @@
+---
+import i from '../../public/My-proyecto.png'
+import Image from 'astro/components/Image.astro';
+---
+
+
+<div class="w-[300px] h-auto m-auto">
+    <div class="mb-4">
+        <Image src={i} alt="img" class="rounded-xl"  />
+        <span class="text-black"> aca van los logos de las tecnologias</span>
+    </div>
+    <button class="bg-white rounded-xl w-full font-semibold text-black">Ver más</button>
+</div>
+
+<style>
+    button:hover{
+        background-color: #141414;
+        color:white;
+        transition: all 100ms;
+    }
+</style>

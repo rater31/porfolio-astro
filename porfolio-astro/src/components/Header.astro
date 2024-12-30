@@ -1,0 +1,21 @@
+---
+import Image from 'astro/components/Image.astro'
+import fotoPerfil from '../../public/imagenPerfil.jpg'
+---
+<div class=" m-auto md:grid lg:w-2/3 lg:flex lg:justify-between mt-[78px]">
+    <main>
+        <Image src={fotoPerfil} alt="Foto de perfil" class="rounded-full m-auto w-[271px]"></Image>
+    </main>
+    <aside class="text-white  md:m-auto lg:m-0 md:w-3/4  lg:w-1/2 text-[24px]">
+        <h1 class="text-[#C5F82A] text-center lg:text-start text-4xl mb-10 mt-10 lg:mt-0">Federico Hidalgo</h1>
+        <p class=" m-auto text-center w-[90%] lg:text-start lg:w-full"><span class="font-xl text-[#C5F82A]">Desarrollador Frontend</span> con más de un año de experiencia resolciendo desafios y dando vida a proyectos web. Me encanta sumergirme en el código y encontrar soluciones creativas para construir interfaces intuitivas y atractivas. Dominio de HTML5, CSS3 y Javascript, además de frameworks como React, Next.js y Astro. Soy un apacionado del desarrollo web disfruto aprendiendo nueva tecnologias para crear experiencias digitales excepcionales</p>
+    </aside>    
+
+</div>
+
+<style>
+    p{
+        letter-spacing:2px;
+        line-height: 40px;
+    }
+</style>

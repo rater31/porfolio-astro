@@ -1,0 +1,85 @@
+---
+
+---
+
+<div >
+    <h3 class="text-center">Acá empiezas las hábilidades de tecnología que manejo</h3>
+    <div class="wrapper my-12">
+        <div class="item  item1"></div>
+        <div class="item  item2"></div>
+        <div class="item  item3"></div>
+        <div class="item  item4"></div>
+        <div class="item  item5"></div>
+        <div class="item  item6"></div>
+        <div class="item  item7"></div>
+        <div class="item  item8"></div>
+    </div>
+</div>
+
+
+<style>
+
+    .wrapper{
+        /* border: 1px solid white; */
+        width: 90%;
+        max-width: 1536px;
+        margin-inline:auto;
+        position: relative;
+        height: 100px;
+        margin-top: 5rem;
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            rgba(0,0,0,0),
+            rgba(0,0,0,1) 20%,
+            rgba(0,0,0,1)80%,
+            rgba(0,0,0,0)
+        );
+    }
+
+    @keyframes scrollLeft {
+         to {
+            left: -200px;
+         }
+    }
+
+    .item{
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 6px;
+        position:absolute;
+        left: 100%;
+        animation-name: scrollLeft;
+        animation-duration: 20s;
+        animation-timing-function: linear ;
+        animation-iteration-count: infinite ;
+    }
+    
+    .item1{
+        animation-delay: calc(20s/ 8* 8 );
+    }
+    .item2{
+        animation-delay:calc(20s / 8  *7 ) ;
+    }
+    .item3{
+        animation-delay: calc(20s / 8  *6 );
+    }
+    .item4{
+        animation-delay: calc(20s / 8  * 5 );
+    }
+    .item5{
+        animation-delay: calc(20s / 8  * 4 );
+    }
+    .item6{
+        animation-delay: calc(20s / 8  * 3 );
+    }
+    .item7{
+        animation-delay: calc(20s / 8  * 2 );
+    }
+    .item8{
+        animation-delay: calc(20s / 8 *1 );
+    }
+
+
+</style>

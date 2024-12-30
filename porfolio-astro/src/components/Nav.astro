@@ -1,0 +1,107 @@
+---
+
+---
+
+<div class="p-4 hidden  bg-[#1E1E1E] lg:flex justify-around m-auto sticky top-0 text-white z-10">
+    <h1 class="font-bold  lg:text-2xl">Portafolio</h1>
+    <div class=" md:text-xl">
+        <a href="#" class="sm:m-0 m-3">Inicio</a>
+        <a href="#proyectos" class="sm:m-0 md:m-3">Proyectos</a>
+        <a href="#" class="sm:m-0 md:m-3">Habilidades</a>
+        <a href="#" class="sm:m-0 md:m-3">Redes</a>
+        
+    </div>    
+</div>
+
+<div class="p-4 bg-[#1e1e1e] justify-between font-bold flex lg:hidden sticky top-0 z-10">
+    <h1 class="lg:text-2xl">Portafolio</h1>
+    <div id="menu-activador" class="menu-activador z-10">
+        <input type="checkbox" id="lanzador" />
+        <label for="lanzador">
+          <span class="menu-activador-linea"></span>
+          <span class="menu-activador-linea"></span>
+          <span class="menu-activador-linea"></span>
+        </label>
+    </div>
+    <div id="modal" class="bg-slate-500  fixed h-full rounded-md w-full">
+        <ul class="text-center mt-[50%]">
+        <li>proyectos</li>
+        <li>Habilidades</li>
+        <li>Redes</li>
+      </ul>
+    </div>
+</div>
+
+
+<style>
+    .container-linea{
+        cursor: pointer;
+    }
+    a:hover{
+        color: #C5F82A;
+        transition: all 100ms;
+    }
+
+
+
+
+    .menu-activador {   
+  width: 30px;
+  height: 20px;
+  margin: 10px 10px 0px 0px;
+  #lanzador {
+    position: absolute;
+    left: -9999px;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;  
+    cursor: pointer;
+  }
+  .menu-activador-linea {
+    height: 2px;
+    border-radius: 3px;
+    background-color: white;
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    transition: all 0.3s;
+  }
+  #lanzador:checked ~ label .menu-activador-linea {
+    &:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateY(-9px)rotate(-45deg);
+    }
+  }
+}
+
+.active{
+    background-color: grey;
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    transition: all 0.3s;
+}
+  
+</style>
+
+<script>
+    const hamburgesa  = document.getElementById('menu-activador')
+    const modal  = document.getElementById('modal')
+
+    hamburgesa.addEventListener('click', ()=>{
+      console.log('hola')
+      if (modal?.classList.contains('active')== true){
+        // modal?.classList.remove('active')
+
+      }else{
+        modal?.classList.add('active')
+      }
+
+    })
+</script>
